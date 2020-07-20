@@ -1,0 +1,23 @@
+body{
+    font-family: $font-family;
+}
+.container{
+    max-width: $max-width;
+    //container'ı ortalar.
+    margin-left:auto;
+    margin-right:auto;
+}
+a{
+    color:$dark-blue;
+}
+.button{
+    display:inline-flex;
+    align-items: center;
+    height: $finger-size;
+    padding-right:22px;
+    padding-left:22px;
+    background-color: $bright-red;
+    border-radius: $border-radius;
+    color:$very-light-gray;
+    font-weight: bold;
+}
