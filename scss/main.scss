@@ -1,9 +1,13 @@
 //reset
-@import "normalize";
-@import "formalize";
+@import "helper/normalize";
+@import "helper/formalize";
 //variable
 @import "variable";
 //global
 @import "global";
 //sections
-@import "header";
+@import "sections/header";
+@import "sections/showcase";
+@import "sections/testimonial";
+@import "sections/footer";
+

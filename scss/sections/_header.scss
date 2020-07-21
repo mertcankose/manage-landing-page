@@ -1,0 +1,99 @@
+.header{
+    .container{
+        height:14vh;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    &-switch{
+        display:none;
+    }
+    &-nav{
+        a{
+            display:inline-flex;
+            align-items: center;
+            height: $finger-size;
+            padding-right:22px;
+            padding-left:22px;
+            font-weight: 700;
+            &:hover{
+                color: $dark-grayish-blue;
+            }
+        }
+    }
+}
+
+
+//MOBILE AND TABLET
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .header{
+        .container{
+            position:relative;
+        }
+        &-switch{
+            display:flex;
+            padding:22px;
+            position:relative;
+            left:22px; //because of padding (effect right space)
+        }
+        &-nav{
+            pointer-events: none; //mouse can't click
+            //z-index: -1;
+            opacity:0;
+            transform:translateY(-6%);
+            transition: .2s;
+            display:flex;
+            position:absolute;
+            top:100%;
+            left:0;
+            right:0;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            .header.nav-show &{
+                opacity:1;
+                transform: translateY(0);
+                pointer-events: auto; //mouse can click
+                //z-index: 1;
+            }
+            a{
+                width:100%;
+                justify-content: center;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                &:nth-child(1){
+                    margin-top:26px;
+                }
+                &:nth-child(5){
+                    margin-bottom:26px;
+                }
+            }
+        }
+        .button{
+            display:none;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .header{
+        &-nav{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a{
+                padding-right:18px;
+                padding-left:18px;
+            }
+        }
+        .button{
+            align-items: flex-start;
+            display:none;
+        }
+    }
+}
+

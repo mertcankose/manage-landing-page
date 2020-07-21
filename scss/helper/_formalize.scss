@@ -11,10 +11,10 @@
   html {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   
   body {
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -55,4 +55,7 @@
   
   td {
     padding: 0;
+  }
+  button{
+    background-color: transparent;
   }
