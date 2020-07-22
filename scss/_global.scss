@@ -1,12 +1,12 @@
 body{
     font-family: $font-family;
     background-color: $very-light-gray;
+
     //background-color: #fff;
 }
-.body-opac{
-    
-    background-color: $dark-grayish-blue;
-}
+// .body-opac-except-header{
+//     background-color: $dark-grayish-blue;
+// }
 .container{
     max-width: $max-width-desktop-up;
     //container'ı ortalar.
@@ -15,11 +15,23 @@ body{
     //padding-left:$gutter;
     //padding-right:$gutter;
 }
+h1{
+    font-size:3.8em;
+}
+h2{
+    font-size:2.5em;
+}
+h3{
+    font-size:1.3em;
+}
 a{
     color:$dark-blue;
+    font-size:1.2em;
 }
 p{
     color: $dark-grayish-blue;
+    font-size:1.1em;
+    line-height: 32px;
 }
 //orange buttons
 .button{

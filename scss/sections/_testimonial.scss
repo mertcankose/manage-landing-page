@@ -1,0 +1,22 @@
+.testimonial{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-people{
+        text-align: center;
+        display:flex;
+        margin-top:80px;
+        margin-bottom:100px;
+        &-1{
+            background-color:$very-light-gray;
+        }
+        &-2{
+            background-color:$very-light-gray;
+        }&-3{
+            background-color:$very-light-gray;
+        }&-4{
+            background-color:$very-light-gray;
+        }
+    }
+}

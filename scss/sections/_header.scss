@@ -1,3 +1,7 @@
+.bg-img{
+    background: url(../../images/bg-tablet-pattern.svg) no-repeat top -200px right -20px;
+}
+
 .header{
     .container{
         height:14vh;
@@ -7,6 +11,11 @@
     }
     &-switch{
         display:none;
+        outline: none;
+    }
+    &-switch-close{
+        display:none;
+        outline: none;
     }
     &-nav{
         a{
@@ -46,7 +55,7 @@
             transition: .2s;
             display:flex;
             position:absolute;
-            top:100%;
+            top:120%;
             left:0;
             right:0;
             flex-direction: column;
