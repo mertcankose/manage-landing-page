@@ -1,3 +1,4 @@
+//hamburger menu
 const headerSwitch = document.querySelector('.header-switch');
 const header = document.querySelector('.header');
 const headerSwitchClose = document.querySelector('.header-switch-close');
@@ -13,3 +14,14 @@ headerSwitchClose.addEventListener('click',()=>{
     headerSwitch.style.display = "flex";
     headerSwitchClose.style.display="none";
 });
+
+
+/*
+//flickity slider (items doesn't seen anymore)
+var elem = document.querySelector('.testimonial-people');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+*/

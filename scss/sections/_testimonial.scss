@@ -3,20 +3,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     &-people{
         text-align: center;
         display:flex;
         margin-top:80px;
         margin-bottom:100px;
-        &-1{
+        width:100%;;
+        &-item{
+            width:25%;
             background-color:$very-light-gray;
+            margin-right:15px;
+            padding-bottom:20px;
+            padding-right:25px;
+            padding-left:25px;
         }
-        &-2{
-            background-color:$very-light-gray;
-        }&-3{
-            background-color:$very-light-gray;
-        }&-4{
-            background-color:$very-light-gray;
+        img{
+            width:100px;
+            position:relative;
+            bottom:40px;
+            z-index: 1;
         }
+        h4{
+            margin-top:-20px;
+            margin-bottom:16px;
+        }
+        p{
+
+        }
+
+    }
+    button{
+        margin-bottom: 100px;;
     }
 }

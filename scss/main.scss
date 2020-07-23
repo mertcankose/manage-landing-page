@@ -1,13 +1,15 @@
 //reset
-@import "helper/normalize";
-@import "helper/formalize";
+@import "helper/_normalize";
+@import "helper/_formalize";
 //variable
-@import "variable";
+@import "_variable";
 //global
-@import "global";
+@import "_global";
+//plugin
+@import "plugins/_flickity";
 //sections
-@import "sections/header";
-@import "sections/showcase";
-@import "sections/testimonial";
-@import "sections/footer";
+@import "sections/_header";
+@import "sections/_showcase";
+@import "sections/_testimonial";
+@import "sections/_footer";
 
