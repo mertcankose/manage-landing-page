@@ -843,6 +843,28 @@ https://flickity.metafizzy.co
   .testimonial button {
     margin-bottom: 100px; }
 
+@media (max-width: 991.98px) {
+  .testimonial-people {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .testimonial-people-item {
+      width: 100%;
+      margin-top: 50px; }
+      .testimonial-people-item:nth-child(1) {
+        margin-top: 0; }
+  .testimonial button {
+    margin-bottom: 50px;
+    margin-top: -50px; } }
+
 .brand {
   background-color: #f25f3a; }
   .brand-orange {
@@ -855,7 +877,7 @@ https://flickity.metafizzy.co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 60px; }
     .brand-orange h2 {
       color: #fff;
@@ -863,6 +885,17 @@ https://flickity.metafizzy.co
     .brand-orange button {
       background-color: #fff;
       color: #f25f3a; }
+
+@media (max-width: 991.98px) {
+  .brand-orange {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .brand-orange h2 {
+      width: 100%;
+      margin-bottom: 24px; } }
 
 .footer {
   background-color: #1d1e25;
@@ -898,6 +931,13 @@ https://flickity.metafizzy.co
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+    .footer-box-1-and-2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
     .footer-box-1 {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -910,6 +950,7 @@ https://flickity.metafizzy.co
           -ms-flex-pack: space-evenly;
               justify-content: space-evenly; }
     .footer-box-2 {
+      margin-left: 80px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -917,8 +958,9 @@ https://flickity.metafizzy.co
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; }
     .footer-box-mail-and-copyright {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -941,3 +983,72 @@ https://flickity.metafizzy.co
         padding-left: 22px;
         padding-right: 16px;
         outline: none; }
+
+@media (max-width: 991.98px) {
+  .footer {
+    height: 650px;
+    position: relative; }
+    .footer-box {
+      height: 650px;
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .footer-box-logo-and-social {
+        -webkit-box-ordinal-group: 100;
+            -ms-flex-order: 99;
+                order: 99; }
+        .footer-box-logo-and-social .footer-logo {
+          width: 100%;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          margin-top: 50px;
+          margin-bottom: 30px;
+          -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2; }
+          .footer-box-logo-and-social .footer-logo img {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            width: 70%; }
+        .footer-box-logo-and-social-social {
+          width: 300px;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .footer-box-logo-and-social-social img {
+            width: 34px; }
+      .footer-box-1-and-2 {
+        margin-top: 40px; }
+      .footer-box-1 {
+        width: 100%; }
+        .footer-box-1 a {
+          margin-bottom: 30px; }
+      .footer-box-mail-and-copyright {
+        width: 100%;
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1; }
+        .footer-box-mail-and-copyright form {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          .footer-box-mail-and-copyright form button {
+            margin-left: 10px; }
+        .footer-box-mail-and-copyright p {
+          position: absolute;
+          bottom: 20px; } }
