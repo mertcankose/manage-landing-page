@@ -1,73 +1,79 @@
-
 .testimonial{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
+    text-align: center;
+    //align-items:center // slider'ı bozuyor.
+    h2{
+    }
     &-people{
-        text-align: center;
-        display:flex;
+        margin-bottom:40px;
         margin-top:80px;
-        margin-bottom:100px;
-        width:100%;
         &-item{
-            width:25%;
-            background-color:$very-light-gray;
-            margin-right:15px;
-            padding-bottom:20px;
-            padding-right:25px;
-            padding-left:25px;
+            width:33%;
+            padding-bottom:100px;
+            background-color: #f4f6ff;
+            margin-left:20px;
+            padding-left:40px;
+            padding-right:40px;
+
+            h4{
+               margin-top:-30px;
+                margin-bottom: 20px;
+            }
         }
         img{
-            width:100px;
-            position:relative;
-            bottom:40px;
-            z-index: 1;
+            position: relative;
+            top:-60px;
+         
         }
-        h4{
-            margin-top:-20px;
-            margin-bottom:16px;
-        }
-        p{
-
-        }
-
     }
-    button{
-        margin-bottom: 100px;
+    .button{
+        align-self: center; //only button
+        margin-bottom: 80px;
     }
 }
 
+.flickity-viewport{
+    padding-top:60px; //for img relative
+}
+
+
+//slider
+
+/* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 3px solid $bright-red;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: $bright-red;
+  }
+
+
 @media (max-width: 991.98px) {
+      
     .testimonial{
-    
+        h2{
+            margin-top:-80px;
+        }
         &-people{
-            width:100%;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
+            // width:100%;
+            // justify-content: center;
+            // flex-direction: column;
+            // align-items: center;
+            margin-top:20px;
             &-item{
                 width:100%;
-                margin-top:50px;
-                &:nth-child(1){
-                    margin-top:0;
-                }
-            }
-            img{
             
             }
-            h4{
-              
-            }
-            p{
-    
-            }
-    
         }
-        button{
-            margin-bottom:50px;
-            margin-top:-50px;
+        .button{
+            margin-bottom:60px;
+            margin-top:20px;
         }
     }
 }

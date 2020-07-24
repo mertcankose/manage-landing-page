@@ -15,13 +15,24 @@ headerSwitchClose.addEventListener('click',()=>{
     headerSwitchClose.style.display="none";
 });
 
-
-/*
+dot = false;
+if(window.innerWidth<900){
+  dot = true;
+}else if(window.innerWidth>900){
+  dot = false;
+}
 //flickity slider (items doesn't seen anymore)
 var elem = document.querySelector('.testimonial-people');
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
-  contain: true
+  contain: true,
+  prevNextButtons: false,
+  pageDots: dot,
+  wrapAround: true,
+  autoPlay: true,
+  autoPlay: 2000,
+  selectedAttraction: 0.015,
+  friction: 0.20,
 });
-*/
+

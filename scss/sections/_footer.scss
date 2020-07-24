@@ -48,7 +48,7 @@
 
 .footer{
     background-color: $very-dark-blue;
-    height:240px;
+    height:300px;
     a{
         color:$very-light-gray;
         font-size:1.1em;
@@ -59,10 +59,12 @@
     .container{
     }
     &-box{
+        height: 280px;
         display:flex;
         justify-content: space-between;
-        height:240px;
+        align-items: stretch;
         &-logo-and-social{
+            width:200px;
             display:flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -87,7 +89,7 @@
             }
         }
         &-2{
-            margin-left:80px;
+            margin-left:140px;
             display:flex;
             flex-direction: column;
             justify-content: space-evenly;
