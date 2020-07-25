@@ -2,9 +2,18 @@
     background: url(../../images/bg-tablet-pattern.svg) no-repeat top -200px right -20px;
 }
 
+.active{
+    background-color: #fdfdfd   
+}
+
 .header{
+    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     .container{
-        height:14vh;
+        height:9vh;
         display:flex;
         justify-content: space-between;
         align-items:center;
@@ -30,6 +39,7 @@
             }
         }
     }
+
 }
 
 

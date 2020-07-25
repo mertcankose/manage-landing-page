@@ -1,7 +1,10 @@
 .showcase{
+    
     .container{
+        margin-top: 100px;
     }
     &-first{
+        scroll-margin-top:160px;
         display:flex;
         align-items: center;
         justify-content: space-between;
@@ -71,6 +74,7 @@
         
     }
         &-second{
+            scroll-margin-top:160px;
             display:flex;
             justify-content: space-between;
             padding-top:30px;

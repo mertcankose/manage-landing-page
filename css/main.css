@@ -354,6 +354,9 @@ td {
 button {
   background-color: transparent; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Be Vietnam", "Roboto", Arial, sans-serif;
   background-color: #fafafa; }
@@ -532,39 +535,46 @@ https://flickity.metafizzy.co
 .bg-img {
   background: url(../../images/bg-tablet-pattern.svg) no-repeat top -200px right -20px; }
 
-.header .container {
-  height: 14vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+.active {
+  background-color: #fdfdfd; }
 
-.header-switch {
-  display: none;
-  outline: none; }
-
-.header-switch-close {
-  display: none;
-  outline: none; }
-
-.header-nav a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 42px;
-  padding-right: 22px;
-  padding-left: 22px;
-  font-weight: 700; }
-  .header-nav a:hover {
-    color: #9095a7; }
+.header {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  .header .container {
+    height: 9vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header-switch {
+    display: none;
+    outline: none; }
+  .header-switch-close {
+    display: none;
+    outline: none; }
+  .header-nav a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 42px;
+    padding-right: 22px;
+    padding-left: 22px;
+    font-weight: 700; }
+    .header-nav a:hover {
+      color: #9095a7; }
 
 @media (max-width: 575.98px) {
   .header .container {
@@ -637,7 +647,11 @@ https://flickity.metafizzy.co
             align-items: flex-start;
     display: none; } }
 
+.showcase .container {
+  margin-top: 100px; }
+
 .showcase-first {
+  scroll-margin-top: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -687,6 +701,7 @@ https://flickity.metafizzy.co
         width: 100%; } }
 
 .showcase2-second {
+  scroll-margin-top: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -816,6 +831,7 @@ https://flickity.metafizzy.co
           justify-content: center;
   text-align: center; }
   .testimonial-people {
+    scroll-margin-top: 240px;
     margin-bottom: 40px;
     margin-top: 80px; }
     .testimonial-people-item {
@@ -864,6 +880,7 @@ https://flickity.metafizzy.co
 .brand {
   background-color: #f25f3a; }
   .brand-orange {
+    scroll-margin-top: 160px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -904,6 +921,7 @@ https://flickity.metafizzy.co
     .footer a:hover {
       color: #f25f3a; }
   .footer-box {
+    scroll-margin-top: 160px;
     height: 280px;
     display: -webkit-box;
     display: -ms-flexbox;
