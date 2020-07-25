@@ -15,24 +15,74 @@ headerSwitchClose.addEventListener('click',()=>{
     headerSwitchClose.style.display="none";
 });
 
-dot = false;
-if(window.innerWidth<900){
-  dot = true;
-}else if(window.innerWidth>900){
-  dot = false;
-}
-//flickity slider (items doesn't seen anymore)
-var elem = document.querySelector('.testimonial-people');
-var flkty = new Flickity( elem, {
-  // options
+//************** 
+
+//FLICKITY
+var options = {
   cellAlign: 'left',
   contain: true,
   prevNextButtons: false,
-  pageDots: dot,
+  pageDots: false,
   wrapAround: true,
   autoPlay: true,
   autoPlay: 2000,
   selectedAttraction: 0.015,
-  friction: 0.20,
+  friction: 0.20
+}
+
+// disable draggable at 1200px
+if ( matchMedia('screen and (max-width: 991.98px)').matches ) {
+  options.pageDots = true;
+}
+
+$('.testimonial-people').flickity(options);
+
+
+
+
+//************************
+
+
+
+const form = document.querySelector('form');
+const email = document.querySelector('#email');
+
+//Form Control
+form.addEventListener('submit', (e)=>{
+  e.preventDefault();
+
+  checkInputs();
 });
+
+function checkInputs(){
+  const emailValue = email.value.trim();
+  //email control
+  if(emailValue === ''){
+    setErrorFor(email,'email cannot be blank!');
+  }else if(!isEmail(emailValue)){
+    setErrorFor(email, 'Not a valid email');
+  }else{
+    setSuccessFor(email);
+  }
+}
+
+function setErrorFor(input,message){
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('small');
+  formControl.className='form-control error';
+  small.innerText=message;
+}
+
+function setSuccessFor(input){
+  const formControl = input.parentElement;
+  formControl.className = 'form-control success';
+}
+
+function isEmail(email){
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  return re.test(String(email).toLowerCase());
+}
+
+
 

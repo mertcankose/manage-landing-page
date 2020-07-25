@@ -881,6 +881,8 @@ https://flickity.metafizzy.co
     .brand-orange button {
       background-color: #fff;
       color: #f25f3a; }
+      .brand-orange button:hover {
+        opacity: 1; }
 
 @media (max-width: 991.98px) {
   .brand-orange {
@@ -913,7 +915,6 @@ https://flickity.metafizzy.co
         -ms-flex-align: stretch;
             align-items: stretch; }
     .footer-box-logo-and-social {
-      width: 200px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -975,14 +976,39 @@ https://flickity.metafizzy.co
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .footer-box-mail-and-copyright form input {
-        border-radius: 20px;
-        border: none;
-        height: 44px;
-        color: black;
-        padding-left: 22px;
-        padding-right: 16px;
-        outline: none; }
+      .footer-box-mail-and-copyright form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+  .footer .form-control {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .footer .form-control input {
+      border-radius: 20px;
+      border: 2px solid #fff;
+      height: 44px;
+      color: black;
+      padding-left: 22px;
+      padding-right: 18px;
+      margin-right: 10px;
+      outline: none; }
+    .footer .form-control small {
+      color: #e74c3c;
+      visibility: hidden;
+      margin-left: 16px;
+      margin-top: 10px;
+      font-size: 14px; }
+  .footer .form-control.error small {
+    visibility: visible; }
+  .footer .form-control.error input {
+    border: 2px solid #e74c3c; }
+  .footer .form-control.success input {
+    border-color: #2ecc71; }
 
 @media (max-width: 991.98px) {
   .footer {

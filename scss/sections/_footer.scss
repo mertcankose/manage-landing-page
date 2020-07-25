@@ -17,6 +17,9 @@
         button{
             background-color: #fff;
             color:$bright-red;
+            &:hover{
+                opacity: 1;
+            }
         }
     }
 }
@@ -64,7 +67,6 @@
         justify-content: space-between;
         align-items: stretch;
         &-logo-and-social{
-            width:200px;
             display:flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -102,20 +104,44 @@
             justify-content: space-evenly;
             align-items: center;
             form{
-                input{
-                    border-radius: 20px;
-                    border:none;
-                    height:44px;
-                    color:black;
-                    padding-left:22px;
-                    padding-right: 16px;
-                    outline: none;
-                }
+                display:flex;
                 button{
-                    
                 }
             }
         }
+    }
+    .form-control{
+        display:flex;
+        flex-direction: column;
+        input{
+            border-radius: 20px;
+            border:2px solid #fff;
+            height:44px;
+            color:black;
+            padding-left:22px;
+            padding-right: 18px;
+            margin-right: 10px;
+            outline: none;
+        }
+        small{
+            color: #e74c3c;
+            visibility: hidden;
+            margin-left:16px;
+            margin-top:10px;
+            font-size:14px;
+        }
+    }
+
+    .form-control.error small {
+        visibility: visible;
+    }
+
+    .form-control.error input {
+        border:2px solid #e74c3c; 
+        
+    }
+    .form-control.success input{
+        border-color: #2ecc71;
     }
 }
 
