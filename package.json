@@ -19,7 +19,6 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "gulp-connect": "^5.7.0",
-    "gulp-open": "^3.0.1"
+    "express": "^4.17.1"
   }
 }

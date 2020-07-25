@@ -2,8 +2,6 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync').create();
-const connect = require('gulp-connect'); // Runs a local webserver
-//const open = require('gulp-open'); // Opens a URL in a web browser
 
 //compile scss into css
 
@@ -19,8 +17,6 @@ function style() {
         .pipe(browserSync.stream());
 }
 
-
-
 function watch() {
     browserSync.init({
         //notify:false,
@@ -33,19 +29,6 @@ function watch() {
     gulp.watch('./js/**/*.js').on('change',browserSync.reload);
 }
 
-
-
-function server(done) {
-    return connect.server({
-    root: './',
-    port: 8080,
-    debug: true,
-    });
-    done();
-}
-
-// Default Gulp command
-exports.default = gulp.series(server);
 exports.style = style;
 exports.watch = watch;
 
